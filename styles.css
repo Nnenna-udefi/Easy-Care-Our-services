@@ -1,0 +1,223 @@
+@mport url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 4rem;
+}
+.menu {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  align-items: center;
+}
+
+.nav-link,
+.nav-log {
+  text-decoration: none;
+  color: #3a3a3a;
+  text-transform: uppercase;
+  margin-left: 1em;
+  font-family: "Open Sans", sans-serif;
+}
+.active .nav-link:hover {
+  color: #004492;
+  font-weight: 600;
+}
+
+.Offer {
+  background: linear-gradient(rgba(0, 68, 146, 0.44), rgba(0, 68, 146, 0.44)),
+    url("images/image.png") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  color: #fff;
+  padding: 4rem 4rem 8rem 4rem;
+}
+
+.Offer img {
+  width: 100%;
+}
+
+h1 {
+  line-height: 4.3rem;
+  font-size: 2.8rem;
+  font-family: "Lora", serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+h1 {
+  line-height: 4.3rem;
+  font-size: 2.8rem;
+  font-family: "Lora", serif;
+  font-weight: 600;
+}
+p {
+  line-height: 1.7rem;
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+}
+h2 {
+  color: #002e68;
+  font-family: "Lora", serif;
+  font-size: 1.87rem;
+  padding-bottom: 2rem;
+}
+h3 {
+  font-size: 1.9rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*Feature Grid */
+.features-grid-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*Reverse Position of text and image */
+.features-grid-row#second-row {
+  flex-direction: row-reverse;
+}
+.features-grid-row#fourth-row {
+  flex-direction: row-reverse;
+
+  #first-row .features-grid-row-text {
+    text-align: left;
+  }
+  #second-row .features-grid-row-text {
+    text-align: right;
+  }
+  #third-row .features-grid-row-text {
+    text-align: left;
+  }
+
+  @media screen and (max-width: 768px) {
+    .features-grid-row .w-50 {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .features-grid-row.d-flex-r {
+      flex-direction: column;
+    }
+    .features-grid-row#second-row {
+      flex-direction: column;
+    }
+    .features-grid-row#fourth-row {
+      flex-direction: column;
+    }
+
+    #first-row .features-grid-row-text,
+    #third-row .features-grid-row-text,
+    #fourth-row .features-grid-row-text,
+    #second-row .features-grid-row-text {
+      text-align: center;
+    }
+  }
+  .badges {
+    margin: auto;
+    width: 25%;
+  }
+  .footer-list {
+    width: 100%;
+  }
+  .footer-img {
+    right: 0;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  .footer-items li {
+    padding-bottom: 2rem;
+  }
+  .apple {
+    width: 40%;
+  }
+  .google-play {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 890px) {
+  .nav-log {
+    display: inline;
+  }
+}
+@media screen and (max-width: 890px) {
+  .nav-img {
+    width: 20%;
+  }
+  .nav-list {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    top: 80px;
+    gap: 0;
+    left: -100%;
+    position: fixed;
+    transition: 0.3s;
+    padding: 2rem;
+  }
+  .nav-link,
+  .nav-log {
+    margin: 3rem 0;
+    font-size: 20px;
+  }
+  .nav-list.active {
+    left: 0;
+  }
+  .nav-link:hover,
+  .nav-link:hover {
+    background-color: #4fdbd2;
+    font-weight: bold;
+  }
+  .nav-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .menu:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .menu:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .menu:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .footer-logo {
+    margin-top: 1rem;
+  }
+}
